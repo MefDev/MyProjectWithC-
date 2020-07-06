@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        
+        /* this program written by Mohamed Meftah
+        string authorName = "Mohamed Meftah";
+        Console.WriteLine("all right reserved to the author: " + authorName); */
+ 
+ // small calculation the program
+            Console.WriteLine("Welcome to this small calculation");
+            Console.Write("Press enter to start the program shortly...");
+           
+            string enter = Console.ReadLine();
+            // collect data from the user
+            Console.Write("Enter your full name please : ");
+            string fullName = Console.ReadLine();
+            Console.WriteLine($"Hey, {fullName} enjoy the program (*__*)");
+            Console.Write("Write a number : ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Write a number: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Which operation do you want to use...");
+            Console.WriteLine("Addition chose: +  ");
+            Console.WriteLine("substraction chose: -  ");
+            Console.WriteLine("division chose: /  ");
+            Console.WriteLine("Modulo chose: % ");
+            Console.Write("Chose one of the operation: ");
+            string operation = Console.ReadLine();
+            // introduce to variables
+            int Addition = num1 + num2;
+            int substraction = num1 - num2;
+            int multiply = num2 * num2;
+            int devived = num2 / num2;
+            int modulo = num1 % num2;
+            string plus = "+";
+            string minus = "-";
+            string div = "/";
+            string multp = "*";
+            string mud = "%";
+
+               
+ 
+            // if statemment logic
+           
+
+            if (operation == plus )
+                Console.WriteLine($"The sum of {num1} + {num2} = {Addition}");
+            if (operation == minus )
+                Console.WriteLine($"The sum of {num1} - {num2} = {substraction}");
+            if (operation == multp)
+                Console.WriteLine($" The sum of {num1} x {num2} = {multiply}");
+            if (operation == div)
+                Console.WriteLine($"The sum of {num1} / {num2} = {devived}");
+            if (operation == mud)
+                Console.WriteLine($"The sum of {num1} % {num2} = {modulo}");
+
+           
+            else
+                Console.WriteLine("Error operation");
+                Console.WriteLine($"Thank you, {fullName} bye have a nice day!");
+            
+            Console.Read();
+            
+        }
+
+        
+    }
+}
