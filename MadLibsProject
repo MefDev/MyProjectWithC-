@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+                  This program ...
+                  Author: ...
+                  */
+            string authorName = "Mohamed Meftah";
+            Console.WriteLine("the program is written by " + authorName);
+
+            // Let the user know that the program is starting:
+            Console.WriteLine("Press Enter to start the program...");
+            string pressKey = Console.ReadLine();
+
+            // Give the Mad Lib a title:
+            string title = "Mad Libs Project";
+
+            Console.WriteLine(title);
+            // Define user input and variables:
+            string story;
+            string firstName, firstAdj, secondAdj, verb, year, secondNoun, secondName, thirdName, food, superHero, fruit;
+            string monster, firstNoun, forthName, animal, country, dessert, thirdAdj;
+
+            // introduce variables 
+            Console.Write("Enter a Name: ");
+            firstName = Console.ReadLine();
+            Console.Write("Write another Name: ");
+            secondName = Console.ReadLine();
+            Console.Write("Write a Monster: ");
+            monster = Console.ReadLine();
+            Console.Write("Write a superhero: ");
+            superHero = Console.ReadLine();
+            Console.Write("Write a name: ");
+            forthName = Console.ReadLine();
+            
+            Console.Write("Write an adjective: ");
+            firstAdj = Console.ReadLine();
+            Console.Write("Write another adjective: ");
+            secondAdj = Console.ReadLine();
+            Console.Write("Enter a verb: ");
+            verb = Console.ReadLine();
+            Console.Write("Write an adjective: ");
+            thirdAdj = Console.ReadLine();
+            Console.Write("Write another noun: ");
+            firstNoun = Console.ReadLine();
+            Console.Write("Write a noun: ");
+            secondNoun = Console.ReadLine();
+            Console.Write("Write a year: ");
+            year = Console.ReadLine();
+            Console.Write("Write a country: ");
+            country = Console.ReadLine();
+            Console.Write("Write a food: ");
+            food = Console.ReadLine();
+            Console.Write("Write a fruit: ");
+            fruit = Console.ReadLine();
+            Console.Write("Write an dessert : ");
+            dessert = Console.ReadLine();
+            Console.Write("Write a animal: ");
+            animal = Console.ReadLine();
+            Console.Write("write a name: ");
+            thirdName = Console.ReadLine();
+
+            // The template for the story:
+
+            story = $"This morning {firstName} woke up feeling {firstAdj}. 'It is going to be a {secondAdj} day!' Outside, \na bunch of {animal}s were protesting to keep\n {food} in stores. They began to {verb} to the rhythm of the {firstNoun}, which made all \nthe {fruit}s very {thirdAdj}. Concerned, {secondNoun} texted {superHero}, who flew {secondName} to {country} and \ndropped {thirdName} in a puddle of frozen {dessert}. {forthName} woke up in the year {year}, \nin a world where {monster}s ruled the world.";
+            Console.WriteLine(story);
+            Console.Read();
+        }
+
+        
+    }
+}
