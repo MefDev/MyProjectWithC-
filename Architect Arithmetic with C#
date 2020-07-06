@@ -1,0 +1,42 @@
+using System;
+
+namespace ArchitectArithmetic
+{
+  class Program
+  {
+    // Written by Mohammed Meftah
+    public static void Main(string[] args)
+    {
+
+     double recArea = RectangleLengthAndWidth(4,5);
+     Console.WriteLine("Length x width of recArea: {0}m", recArea);
+
+
+     double circArea = circleArea(Math.Pow(4,2));
+     Console.WriteLine($"The circle area is PI x Radius^2  = {circArea}m");
+
+     double TriArea = triangleArea(10,9);
+     Console.WriteLine("The triangle area is 0.5 x bottom x height = " + TriArea + "m");
+
+     
+     
+    }
+    public static double RectangleLengthAndWidth(double length, double width)
+    {
+      
+      double area = length * width;
+      return area;
+    }
+    public static double circleArea(double radius)
+    {
+      double areaOfCircle = Math.PI * radius;
+      return areaOfCircle;
+
+    }
+    public static double triangleArea(double bottomofTriangle, double heightOfTriangle)
+    {
+      double areaOftriangle = 0.5 * bottomofTriangle * heightOfTriangle;
+      return areaOftriangle;
+    }
+  }
+}
