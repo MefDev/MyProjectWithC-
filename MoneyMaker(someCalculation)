@@ -1,0 +1,50 @@
+using System;
+
+namespace MoneyMaker
+{
+  class MainClass
+  {
+    public static void Main(string[] args)
+    {
+
+      // introduce the user to the game 
+      string heyMessage = "Hey, user!";
+      // all right reserved to the owner of the game 
+      string author = "Mohammed Meftah";
+      Console.WriteLine("Written by " + author);
+      // title of the game
+      Console.WriteLine("Welcome to Money Maker!");
+      // game code
+      Console.Write("Enter an amount of money to convert it to\ncoin for you: ");
+      double amountOfMoney = Convert.ToDouble(Console.ReadLine());
+      // alert the user
+      Console.WriteLine( amountOfMoney + " cents is equal to ... ");
+
+      // introduce to variables which we use in this game
+      int goldValue = 10;
+      int silverValue = 5;
+      // small calculation
+      double goldCoins = Math.Floor(amountOfMoney / goldValue);
+
+      double remainingAmount = amountOfMoney % goldValue; 
+
+      double silverCoins = Math.Floor(remainingAmount / silverValue);
+      remainingAmount = remainingAmount % silverValue;
+      
+
+
+      // output
+      Console.WriteLine("Gold coins: " + goldCoins);
+      Console.WriteLine("Silver coins: " + silverCoins);
+      Console.WriteLine("bronze coins: " + remainingAmount);
+       
+
+
+
+
+
+
+      
+    }
+  }
+}
