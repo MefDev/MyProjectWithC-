@@ -1,0 +1,63 @@
+using System;
+
+namespace HelloWorld
+{   
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+        // This small game was developed by Mohammed Meftah
+            Console.WriteLine("*********-------Welcome to temprature Game-------*********");
+            
+            Console.Write("What is the temprature in your country: ");
+            string TempratureDegreeString = Console.ReadLine();
+            int TempratureDegree;
+            int ifNum;
+            if (int.TryParse(TempratureDegreeString, out ifNum))
+            {
+                TempratureDegree = ifNum;
+            }
+            else
+            {
+                ifNum = 0;
+                Console.WriteLine("Null Value! temprature back to default Value " + ifNum);
+            }
+
+
+
+
+
+
+
+
+
+
+            if (ifNum == 35)
+            {
+                Console.WriteLine("It is very warm there it: {0}C", ifNum);
+            }
+            else if (ifNum > 35)
+            {
+                Console.WriteLine("It is like hill out there it: {0}C", ifNum);
+            }
+            else if (ifNum < 35)
+            {
+                Console.WriteLine("It is cold out there it: {0}C", ifNum);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Char ? ");
+            }
+            Console.Read();
+
+        }
+
+        
+        }
+
+        
+
+
+    }
+
