@@ -4,21 +4,47 @@ namespace ArchitectArithmetic
 {
   class Program
   {
-    // Written by Mohammed Meftah
     public static void Main(string[] args)
     {
 
-     double recArea = RectangleLengthAndWidth(4,5);
+     double recArea = RectangleLengthAndWidth(2500,1500);
      Console.WriteLine("Length x width of recArea: {0}m", recArea);
 
 
-     double circArea = circleArea(Math.Pow(4,2));
+     double circArea = circleArea(Math.Pow(375500,2));
      Console.WriteLine($"The circle area is PI x Radius^2  = {circArea}m");
 
-     double TriArea = triangleArea(10,9);
-     Console.WriteLine("The triangle area is 0.5 x bottom x height = " + TriArea + "m");
+     double triArea = triangleArea(500,750);
+     Console.WriteLine("The triangle area is 0.5 x bottom x height = " + triArea + "m");
 
-     
+    double totalArea = recArea + circArea + triArea;
+    
+    double floringMaterialCostInPesos = 180;
+
+    double totalCost = floringMaterialCostInPesos * totalArea;
+   
+
+    
+
+    Console.WriteLine("The total cost to buikd buid build this projet is: " + totalCost); 
+
+  double TriTajMahal = TriOfTajMahal(24, 24);
+ 
+Console.WriteLine("Length x width of halfsquare\nOf Taj Mahal: {0}m", TriTajMahal);
+double SquareTajMahal = SquareOfTajMahal(90.5, 90.5);
+Console.WriteLine("Length x width of Square \nOf tajMahal: {0}m", SquareTajMahal);
+double totalCostOfTajMahal = floringMaterialCostInPesos * (SquareTajMahal + TriTajMahal);
+Console.WriteLine("The total Cost for TajMahal:  " + totalCostOfTajMahal + "pisos");
+
+
+double RecMosque = RecOfMosqueOfMecca(284, 264);
+Console.WriteLine("Length x width of Rectangle \nOf Great Mosque Of Mecca: {0}m", RecMosque);
+ double TriMosque = TriOfMosqueOfMecca(264, 84);
+ Console.WriteLine("Length x width of Triangle \nOf Great Mosque Of Mecca: {0}m", TriMosque);
+ double SmallRec = OtherRecOfMosqueMecca(180, 106);
+ Console.WriteLine("Length x width of Small Rectangle of top \nOf Great Mosque Of Mecca: {0}m", SmallRec);
+ 
+
      
     }
     public static double RectangleLengthAndWidth(double length, double width)
@@ -38,5 +64,35 @@ namespace ArchitectArithmetic
       double areaOftriangle = 0.5 * bottomofTriangle * heightOfTriangle;
       return areaOftriangle;
     }
+    public static void CalculateTotalCostforTajMahal()
+    {
+      
+    }
+    public static double TriOfTajMahal(double sideOne, double sideTwo)
+    {
+      double squareArea = sideOne * sideTwo;
+      
+      return squareArea;
+    }
+    public static double SquareOfTajMahal(double length, double width)
+    {
+      double AreaOfSqaure = length * width;
+       return AreaOfSqaure;
+    }
+    public static double RecOfMosqueOfMecca(double hight, double width)
+    {
+      double recArea = hight * width;
+      return recArea;
+    }
+    public static double TriOfMosqueOfMecca(double hight, double bottom)
+    {
+      return 0.5 * hight * bottom;
+    }
+    public static double OtherRecOfMosqueMecca(double hight, double width)
+    {
+      return hight * width;
+    }
+
+
   }
 }
